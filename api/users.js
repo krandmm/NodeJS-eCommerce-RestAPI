@@ -3,7 +3,7 @@ var router   = express.Router();
 var User     = require('../models/User');
 var util     = require('../util');
 
-// index
+// index 
 router.get('/', util.isLoggedin, function(req,res,next){
   User.find({})
   .sort({username:1})

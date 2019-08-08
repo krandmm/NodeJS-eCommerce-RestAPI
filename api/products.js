@@ -43,7 +43,7 @@ router.get('/:id',
 );
 
 // Create Product
-router.post('/',
+router.get('/',
   function(req, res, next){
     Product.findOne({})
     .sort({id: -1})
@@ -73,7 +73,7 @@ router.post('/',
   }
 );
 
-// Update Product
+// Update ProductS
 router.put('/:id',
   function(req, res, next){
     Product.findOneAndUpdate({id:req.params.id}, req.body)
